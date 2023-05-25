@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestGenerator.MVVM.Views"
         mc:Ignorable="d"
-        Title="QuestionView" Height="450" Width="800">
+        Title="GenerateView" Height="450" Width="800">
     <Grid Grid.Column="1" Margin="20" Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

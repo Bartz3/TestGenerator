@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestGenerator.MVVM.Views;
 
 namespace TestGenerator
 {
@@ -23,6 +24,36 @@ namespace TestGenerator
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            GenerateView generateView = new GenerateView();
+            this.Visibility = Visibility.Hidden;
+            generateView.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            QuestionView questionView = new QuestionView();
+            this.Visibility = Visibility.Hidden;
+            questionView.Show();
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+           Application.Current.Shutdown();
+        }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
     }
 }
