@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestGenerator.MVVM.ViewModel
 {
-    class MainViewModel
+    public class GenerateViewModel : Core.ViewModel
     {
     }
 }
